@@ -63,6 +63,12 @@ class MissPlete {
       this.removeDropdown();
       this.highlightedIndex = -1;
     });
+    
+    this.input.addEventListener('click', (event) => {
+      if (this.input.value.length > 0) {
+        this.renderOptions();
+      }
+    });
   }  // end constructor
 
   static scoreFn(inputValue, optionSynonyms) {
